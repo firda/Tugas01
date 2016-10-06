@@ -178,7 +178,6 @@
             style="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bgbtn"
             android:text="OK"
             android:textColor="@android:color/white" />
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="kota">
+        <item>Kepanjen</item>
+        <item>Singosari</item>
+        <item>Sawojajar</item>
+        <item>Pakisaji</item>
+        <item>Sumbermanjing</item>
+        <item>Pagak</item>
+    </string-array>
+</resources>

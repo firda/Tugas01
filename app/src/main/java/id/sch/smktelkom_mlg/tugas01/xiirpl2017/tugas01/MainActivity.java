@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etNama, etPesan, etWaktu;
     RadioGroup rgJK;
     Spinner  spK;
+    CheckBox cbP, cbE, cbH, cbPD, cbA;
     TextView tvHasil, tvh2;
 
     @Override
@@ -35,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
         etWaktu = (EditText) findViewById(R.id.editTextLama);
         rgJK = (RadioGroup) findViewById(R.id.radiogroupJK);
         spK = (Spinner) findViewById(R.id.spinnerKota);
+        cbP = (CheckBox) findViewById(R.id.checkBoxP);
+        cbE = (CheckBox) findViewById(R.id.checkBoxE);
+        cbH = (CheckBox) findViewById(R.id.checkBoxH);
+        cbPD = (CheckBox) findViewById(R.id.checkBoxPD);
+        cbA = (CheckBox) findViewById(R.id.checkBoxA);
         tvHasil = (TextView) findViewById(R.id.textViewHasil);
 
         findViewById(R.id.buttonOK).setOnClickListener(new View.OnClickListener() {
@@ -58,12 +64,24 @@ public class MainActivity extends AppCompatActivity {
             if (rgJK.getCheckedRadioButtonId() != -1) {
                 RadioButton rb = (RadioButton) findViewById(rgJK.getCheckedRadioButtonId());
                 hasil = rb.getText().toString();
-            }
-            if (hasil == null) {
-                tvHasil.setText("Belum memilih jenis pemesanan");
-            } else {
-                tvHasil.setText("Nama :" + nama + "\nPesan :" + pesan + "\nWaktu :" + waktu + "\nJenis pemesanan : " + hasil + "\nAlamat :" + spK.getSelectedItem().toString());
 
+
+                String hsl = "Pilihan anda:\n";
+                int startlen = hasil.length();
+                if (cbP.isChecked()) hsl += cbA.getText() + "\n";
+                if (cbE.isChecked()) hsl += cbA.getText() + "\n";
+                if (cbH.isChecked()) hsl += cbA.getText() + "\n";
+                if (cbPD.isChecked()) hsl += cbA.getText() + "\n";
+                if (cbA.isChecked()) hsl += cbA.getText() + "\n";
+
+                if(hasil.length()==startlen) hasil+="Tidak ada pilihan";
+
+                if (hsl == null) {
+                    tvHasil.setText("Belum memilih jenis pemesanan");
+                } else {
+                    tvHasil.setText("Nama :" + nama + "\nPesan :" + pesan + "\nWaktu :" + waktu + "\nJenis pemesanan : " + hasil + "\nAlamat :" + spK.getSelectedItem().toString()+"Hasil :" + hsl);
+
+                }
             }
         }
     }

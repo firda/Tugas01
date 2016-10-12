@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="\nWARTEG ONLINE\t"
+            android:text="\nWARTEG BUDHE HAR"
             android:textColor="@color/colorPrimaryDark" />
 
         <TextView
@@ -100,11 +100,11 @@
             style="@style/Base.TextAppearance.AppCompat.Subhead.Inverse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="\nTahun Pemesanan"
+            android:text="\nTanggal Pemesanan"
             android:textColor="@color/colorPrimaryDark" />
 
         <EditText
-            android:id="@+id/editTextTahun"
+            android:id="@+id/editTextPesan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Tanggal pemesanan" />
@@ -164,7 +164,7 @@
             style="@style/Base.TextAppearance.AppCompat.Subhead.Inverse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="\nWaktu Pengantaran"
+            android:text="\nJamPengantaran"
             android:textColor="@color/colorPrimaryDark" />
 
         <EditText
